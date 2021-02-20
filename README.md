@@ -12,7 +12,7 @@ Installing
 
 ### As a Tampermonkey / UserScript: (Install Tampermonkey [here](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo))
 
-This script can be installed into Greasemonkey or other user script plugins by going here:
+This script can be installed into Tampermonkey or other user script plugins by going here:
 
 [FilterPageComment.user.js](https://github.com/KhanhPham2411/PublicUserScripts/raw/main/Facebook/FilterPageComment.user.js)
 
