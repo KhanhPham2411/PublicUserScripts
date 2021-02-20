@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Facebook Page Comment Cleaner
 // @namespace    http://tampermonkey.net/
-// @version      1.3
+// @version      1.0.1
 // @description  Facebook Filter Page Comment
 // @author       You
 // @include      *facebook.com/*
