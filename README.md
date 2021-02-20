@@ -14,6 +14,7 @@ Installing
 
 This script can be installed into Tampermonkey or other user script plugins by going here:
 
+Facebook
 [FilterPageComment.user.js](https://github.com/KhanhPham2411/PublicUserScripts/raw/main/Facebook/FilterPageComment.user.js)
 
 
