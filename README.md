@@ -10,7 +10,7 @@ This repo contains a few of my UserScripts that I've build
 Installing
 ----------
 
-As a Tampermonkey / UserScript: ([Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo))
+As a Tampermonkey / UserScript: (Install Tampermonkey [here](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo))
 
 This script can be installed into Greasemonkey or other user script plugins by going here:
 
