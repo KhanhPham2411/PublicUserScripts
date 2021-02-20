@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Facebook Page Comment Cleaner
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      1.2
 // @description  Facebook Filter Page Comment
 // @author       You
 // @include      *facebook.com/*
@@ -14,10 +14,11 @@
     // Your code here...
     console.log("Filter Page Comment")
 
-    setTimeout(function(){
-        FilterPageComment()
-    }, 1000)
-
+    documentChanged(function(){
+        setTimeout(function(){
+            FilterPageComment()
+        }, 1000)
+    });
 })();
 async function FilterPageComment(){
     var comments = document.querySelectorAll('[aria-label^="Comment by"], [aria-label^="Reply by"]');
