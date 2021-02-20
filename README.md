@@ -12,7 +12,8 @@ Installing
 
 As a Greasemonkey / UserScript:
 
-This script can be installed into Greasemonkey or other user script plugins by going here: 
+This script can be installed into Greasemonkey or other user script plugins by going here:
+
 [FilterPageComment.user.js](https://github.com/KhanhPham2411/PublicUserScripts/raw/main/Facebook/FilterPageComment.user.js)
 
 
