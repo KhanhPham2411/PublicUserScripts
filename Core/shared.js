@@ -132,6 +132,10 @@ function findReactValue(object, key){
 }
 
 // system
+function openInNewTab(url) {
+    var win = window.open(url, '_blank');
+    win.focus();
+}
 function formatDate(date, format, utc) {
     var MMMM = ["\x00", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var MMM = ["\x01", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
