@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Facebook Page Comment Cleaner
-// @namespace    http://tampermonkey.net/
-// @version      1.0.1
-// @description  Facebook Filter Page Comment
+// @name         Facebook Hide Page Comment
+// @namespace    khanhpham2411
+// @version      1.0.2
+// @description  Facebook Hide Page Comment
 // @author       You
 // @include      *facebook.com/*
 // @grant        none
@@ -13,7 +13,7 @@
     'use strict';
 
     // Your code here...
-    console.log("Filter Page Comment")
+    console.log("Hide Page Comment")
 
     documentChanged(function(){
         setTimeout(function(){
@@ -34,9 +34,37 @@ async function FilterPageComment(){
         }
     
         if (comment.entityType == "Page"){
-            comment.parentElement.parentElement.hidden = true;
+            // comment.parentElement.parentElement.hidden = true;
+            await hideComment(comment)
         }
     });
+}
+async function hideComment(comment){
+	var commentId = findReactValue(comment, 'comment').id;
+
+	let variables = {
+		"input": {
+		  "client_mutation_id": "1",
+		  "actor_id": "1000000",
+		  "comment_id": `${commentId}`,
+		  "feedback_source": 2,
+		  "site": "www"
+		},
+		"isComet": true,
+		"feedLocation": "PERMALINK"
+	  }
+	
+    var res = await fetch("https://www.facebook.com/api/graphql/", {
+		"headers": {
+			"content-type": "application/x-www-form-urlencoded",
+		},
+		"body": `
+			__comet_req=1&fb_dtsg=${fb_dtsg}&
+			fb_api_req_friendly_name=UFI2HideCommentMutation&variables=${JSON.stringify(variables)}&doc_id=2545600248900847`,
+		"method": "POST"
+    });
+
+    return await res.text();
 }
 async function GetEntity(actorID){
     let variables = {
