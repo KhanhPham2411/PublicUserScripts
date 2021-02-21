@@ -17,11 +17,11 @@
 
     documentChanged(function(){
         setTimeout(function(){
-            FilterPageComment()
+            HidePageComment()
         }, 1000)
     });
 })();
-async function FilterPageComment(){
+async function HidePageComment(){
     var comments = document.querySelectorAll('[aria-label^="Comment by"], [aria-label^="Reply by"]');
 
     comments.forEach(async function(comment){
