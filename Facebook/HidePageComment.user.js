@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Facebook Hide Page Comment
 // @namespace    khanhpham2411
-// @version      1.0.2
+// @version      1.0.3
 // @description  Facebook Hide Page Comment
 // @author       You
 // @include      *facebook.com/*
@@ -34,8 +34,8 @@ async function HidePageComment(){
         }
     
         if (comment.entityType == "Page"){
-            // comment.parentElement.parentElement.hidden = true;
             await hideComment(comment)
+            comment.parentElement.parentElement.hidden = true;
         }
     });
 }
