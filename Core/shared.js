@@ -36,15 +36,24 @@ function EnableObserver(target, callback)
 }
 
 var lstCallback = [];
+var lock = false
 function documentChanged(callback)
 {
     lstCallback.push(callback);
 }
 
 function runListCallBack(mutations){
-    lstCallback.forEach(function(callback){
-        callback(mutations);
-    });
+    if (lock == true){
+        return
+    }
+    lock = true
+    setTimeout(function(){
+        lstCallback.forEach(function(callback){
+            callback(mutations);
+        });
+
+        lock = false
+    }, 500)
 }
 
 EnableObserver(document, runListCallBack);

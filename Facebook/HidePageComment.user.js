@@ -16,9 +16,7 @@
     console.log("Hide Page Comment")
 
     documentChanged(function(){
-        setTimeout(function(){
-            HidePageComment()
-        }, 1000)
+        HidePageComment()
     });
 })();
 async function HidePageComment(){
