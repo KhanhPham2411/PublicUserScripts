@@ -51,9 +51,10 @@ function runListCallBack(mutations){
         lstCallback.forEach(function(callback){
             callback(mutations);
         });
-
-        lock = false
-    }, 500)
+        setTimeout(function(){
+            lock = false
+        }, 1000)
+    }, 700)
 }
 
 EnableObserver(document, runListCallBack);
