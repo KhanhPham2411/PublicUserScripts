@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Facebook Hide Page Comment
 // @namespace    khanhpham2411
-// @version      1.0.3
+// @version      1.0.4
 // @description  Facebook Hide Page Comment
 // @author       You
 // @include      *facebook.com/*
@@ -33,7 +33,7 @@ async function HidePageComment(){
         if(!comment.reactcount){
             comment.reactcount = 0;
 
-            var reactcountButton = comment.querySelector('div[role=button]');
+            var reactcountButton = comment.querySelector('div[role=button] > div > span');
             var feeback = findReactValue(reactcountButton, 'feedback');
             if(feeback){
                 var reactors = feeback.reactors;
