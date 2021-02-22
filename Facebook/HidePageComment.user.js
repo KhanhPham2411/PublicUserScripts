@@ -23,15 +23,27 @@ async function HidePageComment(){
     var comments = document.querySelectorAll('[aria-label^="Comment by"], [aria-label^="Reply by"]');
 
     comments.forEach(async function(comment){
-        if (comment.actorID == null){
+        if (!comment.actorID){
             comment.actorID = findReactValue(comment.querySelector('a[role=link]'), 'actorID')
         }
-        if (comment.entity == null){
+        if (!comment.entity){
             comment.entity = await GetEntity(comment.actorID)
             comment.entityType =  comment.entity.data.node.__typename
         }
+        if(!comment.reactcount){
+            comment.reactcount = 0;
+
+            var reactcountButton = comment.querySelector('div[role=button]');
+            var feeback = findReactValue(reactcountButton, 'feedback');
+            if(feeback){
+                var reactors = feeback.reactors;
+                if(reactors){
+                    comment.reactcount = reactors.count;
+                }
+            }
+        }
     
-        if (comment.entityType == "Page"){
+        if (comment.entityType == "Page" && comment.reactcount == 0){
             await hideComment(comment)
             comment.parentElement.parentElement.hidden = true;
         }
