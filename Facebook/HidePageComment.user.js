@@ -43,7 +43,7 @@ async function HidePageComment(){
             }
         }
     
-        if (comment.entityType == "Page" && comment.reactcount == 0){
+        if (comment.entityType == "Page" && comment.reactcount > 5){
             await hideComment(comment)
             comment.parentElement.parentElement.hidden = true;
         }
