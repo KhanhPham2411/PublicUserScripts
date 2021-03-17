@@ -53,7 +53,7 @@ function runListCallBack(mutations){
         });
         setTimeout(function(){
             lock = false
-        }, 1000)
+        }, 5000)
     }, 700)
 }
 
