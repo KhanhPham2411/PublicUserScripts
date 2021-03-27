@@ -21,6 +21,9 @@
 })();
 
 function RemoveAds(){
-    var divs = [...document.querySelectorAll('.shopee-search-item-result__item')].filter(div => div.innerHTML.includes('Tài'));
-    divs.forEach(div => div.hidden=true);
+    var items = [...document.querySelectorAll('.shopee-search-item-result__item')]
+                .filter(item => item.innerHTML.includes('Tài'));
+    items.forEach(function(item){
+        item.hidden = true;
+    })
 }
