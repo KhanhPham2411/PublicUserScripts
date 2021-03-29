@@ -18,4 +18,4 @@ Facebook
 [HidePageComment.user.js](https://github.com/KhanhPham2411/PublicUserScripts/raw/main/Facebook/HidePageComment.user.js)
 
 Shopee
-[ShopeeRemoveAds.js](https://github.com/KhanhPham2411/PublicUserScripts/raw/main/Shopee/ShopeeRemoveAds.js)
+[ShopeeRemoveAds.user.js](https://github.com/KhanhPham2411/PublicUserScripts/raw/main/Shopee/ShopeeRemoveAds.user.js)
