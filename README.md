@@ -17,4 +17,5 @@ This script can be installed into Tampermonkey or other user script plugins by g
 Facebook
 [HidePageComment.user.js](https://github.com/KhanhPham2411/PublicUserScripts/raw/main/Facebook/HidePageComment.user.js)
 
-
+Shopee
+[HidePageComment.user.js](https://github.com/KhanhPham2411/PublicUserScripts/raw/main/Shopee/ShopeeRemoveAds.js)
