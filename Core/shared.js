@@ -41,6 +41,15 @@ function documentChanged(callback)
 {
     lstCallback.push(callback);
 }
+function mouseChanged(callback)
+{
+    if(lstCallback.length == 0){
+        document.onmousemove = function(){
+            runListCallBack();
+        };
+    }
+    lstCallback.push(callback);
+}
 
 function runListCallBack(mutations){
     if (lock == true){
