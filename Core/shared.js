@@ -39,6 +39,9 @@ var lstCallback = [];
 var lock = false
 function documentChanged(callback)
 {
+    if(lstCallback.length == 0){
+        EnableObserver(document, runListCallBack);
+    }
     lstCallback.push(callback);
 }
 function mouseChanged(callback)
@@ -65,8 +68,6 @@ function runListCallBack(mutations){
         }, 5000)
     }, 700)
 }
-
-EnableObserver(document, runListCallBack);
 
 // Element Builder
 function createButton(text)
