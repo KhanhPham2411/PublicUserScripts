@@ -19,3 +19,6 @@ Facebook
 
 Shopee
 [ShopeeRemoveAds.user.js](https://github.com/KhanhPham2411/PublicUserScripts/raw/main/Shopee/ShopeeRemoveAds.user.js)
+
+Tiki
+[TikiHideLowSale.user.js](https://github.com/KhanhPham2411/PublicUserScripts/raw/main/Tiki/TikiHideLowSale.user.js)
